@@ -8,4 +8,7 @@ export class SpaceAge {
     this.daysOnEarth = (this.years * 365) + (this.months * 30) + (this.days);
     return this.daysOnEarth;
   }
+  calculateYearsOnMercury(){
+
+  }
 }
