@@ -32,7 +32,9 @@ export class SpaceAge {
     return this.yearsOnJupiter = parseFloat(calculations);
 
   }
-  lifeExpectancy(planetAge){
-
+  lifeExpectancy(){
+    const lifeExpectancyTest = new SpaceAge(78, 9, 4);
+    console.log(lifeExpectancyTest.calculateYearsOnVenus());
+    }
 
   }
