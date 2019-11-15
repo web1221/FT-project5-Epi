@@ -21,6 +21,7 @@ export class SpaceAge {
     return this.yearsOnVenus = parseFloat(this.toFixedNotRounded((this.daysOnEarth / 225), 1));
   }
   calculateYearsOnMars(){
-
+    this.calculateDaysOnEarth();
+    return this.yearsOnMars = parseFloat(this.toFixedNotRounded((this.daysOnEarth / 687), 1));
   }
 }
