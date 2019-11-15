@@ -25,4 +25,10 @@ describe ('spaceAge', () => {
   test('should return how many years the person has before they reach their life expectancy on Mercury', () => {
     expect(spaceAge.calculateLifeExpOnMercury()).toEqual(326);
   });
+  test('should return how many years the person has before they reach their life expectancy on Venus', () => {
+    expect(spaceAge.calculateLifeExpOnVenus()).toEqual(127.7);
+  });
+  test('should return how many years the person has before they reach their life expectancy on Mars', () => {
+    expect(spaceAge.calculateLifeExpOnMars()).toEqual(41.8);
+  });
 });

@@ -3,7 +3,7 @@ export class SpaceAge {
     this.years = years;
     this.months = months;
     this.days = days;
-    this.lifeExpectancyInDays = 28766;
+    this.lifeExpectancyInDays = 28744;
   }
 
   toFixedNotRounded(num, fixed){
@@ -13,6 +13,8 @@ export class SpaceAge {
   calculateDaysOnEarth(){
     return this.daysOnEarth = (this.years * 365) + (this.months * 30) + (this.days);
   }
+
+  // Mercury Calculations:
   calculateLifeExpOnMercury(){
     return this.lifeOnMercury = parseFloat(this.toFixedNotRounded(this.lifeExpectancyInDays / 88), 1);
   }
@@ -21,14 +23,26 @@ export class SpaceAge {
     return this.yearsOnMercury = parseFloat(this.toFixedNotRounded((this.daysOnEarth / 88), 1));
   }
 
+  // Venus Calculations:
+  calculateLifeExpOnVenus(){
+    return this.lifeOnVenus = parseFloat(this.toFixedNotRounded((this.lifeExpectancyInDays / 225), 1));
+
+  }
   calculateYearsOnVenus(){
     this.calculateDaysOnEarth();
     return this.yearsOnVenus = parseFloat(this.toFixedNotRounded((this.daysOnEarth / 225), 1));
+  }
+
+  //Mars Calculations:
+  calculateLifeExpOnMars(){
+  
   }
   calculateYearsOnMars(){
     this.calculateDaysOnEarth();
     return this.yearsOnMars = parseFloat(this.toFixedNotRounded((this.daysOnEarth / 687), 1));
   }
+
+  //Jupiter Calculations
   calculateYearsOnJupiter(){
     this.calculateDaysOnEarth();
     let calculations = this.toFixedNotRounded((this.daysOnEarth / (11.8 * 365)), 1);
