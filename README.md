@@ -12,7 +12,7 @@
 
 ###### The program returns the users life expectancy based someone who lives in the United States.
 * __Input: Lives in USA__
-* __Output: 78.69 years old__
+* __Output: 78.7 years old__
 
 ###### The program will calculate age on Mercury.
 * __Input: 20 years old, 3 months, and 4 days.__
