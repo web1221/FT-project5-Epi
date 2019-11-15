@@ -5,7 +5,7 @@ export class SpaceAge {
     this.days = days;
   }
 
-  toFixedNotRounded(num, fixed) {
+  toFixedNotRounded(num, fixed){
     let re = new RegExp('^-?\\d+(?:\.\\d{0,' + (fixed || -1) + '})?');
     return num.toString().match(re)[0];
   }
@@ -16,12 +16,15 @@ export class SpaceAge {
     this.calculateDaysOnEarth();
     return this.yearsOnMercury = parseFloat((this.daysOnEarth / 88).toFixed(0));
   }
-  calculateYearsOnVenus() {
+  calculateYearsOnVenus(){
     this.calculateDaysOnEarth();
     return this.yearsOnVenus = parseFloat(this.toFixedNotRounded((this.daysOnEarth / 225), 1));
   }
   calculateYearsOnMars(){
     this.calculateDaysOnEarth();
     return this.yearsOnMars = parseFloat(this.toFixedNotRounded((this.daysOnEarth / 687), 1));
+  }
+  calculateYearsOnJupiter(){
+
   }
 }
