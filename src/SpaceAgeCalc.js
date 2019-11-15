@@ -33,6 +33,6 @@ export class SpaceAge {
 
   }
   lifeExpectancy(planetAge){
-    this.lifeExpectancy = calculateDaysOnEarth(78, 3, 4)
+
 
   }
