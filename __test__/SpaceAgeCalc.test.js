@@ -13,4 +13,7 @@ describe ('spaceAge', () => {
   test('should calculate how old user is on Mercury', () => {
     expect(spaceAge.calculateYearsOnMercury()).toEqual(84.0);
   });
+  test('should calculate how old user is on Venus', () => {
+    expect(spaceAge.calculateYearsOnVenus()).toEqual(32.8);
+  });
 });

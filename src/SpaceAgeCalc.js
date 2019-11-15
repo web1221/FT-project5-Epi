@@ -13,4 +13,7 @@ export class SpaceAge {
     this.yearsOnMercury = parseFloat((this.daysOnEarth / 88).toFixed(0));
     return this.yearsOnMercury;
   }
+  calculateYearsOnVenus() {
+    
+  }
 }
