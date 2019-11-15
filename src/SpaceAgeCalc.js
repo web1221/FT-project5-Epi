@@ -3,7 +3,7 @@ export class SpaceAge {
     this.years = years;
     this.months = months;
     this.days = days;
-    // this.lifeExpectancy = 78.7;
+    this.lifeExpectancyInDays = 28766;
   }
 
   toFixedNotRounded(num, fixed){
@@ -13,11 +13,14 @@ export class SpaceAge {
   calculateDaysOnEarth(){
     return this.daysOnEarth = (this.years * 365) + (this.months * 30) + (this.days);
   }
-
+  calculateLifeExpOnMercury(){
+    return this.lifeOnMercury = parseFloat(this.toFixedNotRounded(this.lifeExpectancyInDays / 88), 1);
+  }
   calculateYearsOnMercury(){
     this.calculateDaysOnEarth();
-    return this.yearsOnMercury = parseFloat((this.daysOnEarth / 88).toFixed(0));
+    return this.yearsOnMercury = parseFloat(this.toFixedNotRounded((this.daysOnEarth / 88), 1));
   }
+
   calculateYearsOnVenus(){
     this.calculateDaysOnEarth();
     return this.yearsOnVenus = parseFloat(this.toFixedNotRounded((this.daysOnEarth / 225), 1));
@@ -32,9 +35,9 @@ export class SpaceAge {
     return this.yearsOnJupiter = parseFloat(calculations);
 
   }
-  lifeExpectancy(){
-    const lifeExpectancyTest = new SpaceAge(78, 9, 4);
-    console.log(lifeExpectancyTest.calculateYearsOnVenus());
-    }
+  lifeExpectancyOnMars(){
 
   }
+
+
+}
