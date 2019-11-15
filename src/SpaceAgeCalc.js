@@ -6,22 +6,18 @@ export class SpaceAge {
   }
 
   toFixedNotRounded(num, fixed) {
-    var re = new RegExp('^-?\\d+(?:\.\\d{0,' + (fixed || -1) + '})?');
+    let re = new RegExp('^-?\\d+(?:\.\\d{0,' + (fixed || -1) + '})?');
     return num.toString().match(re)[0];
-}
+  }
   calculateDaysOnEarth(){
-    this.daysOnEarth = (this.years * 365) + (this.months * 30) + (this.days);
-    return this.daysOnEarth;
+    return this.daysOnEarth = (this.years * 365) + (this.months * 30) + (this.days);
   }
   calculateYearsOnMercury(){
     this.calculateDaysOnEarth();
-    this.yearsOnMercury = parseFloat((this.daysOnEarth / 88).toFixed(0));
-    return this.yearsOnMercury;
+    return this.yearsOnMercury = parseFloat((this.daysOnEarth / 88).toFixed(0));
   }
   calculateYearsOnVenus() {
     this.calculateDaysOnEarth();
-    let notRounded = this.toFixedNotRounded((this.daysOnEarth / 225), 1)
-    this.yearsOnVenus = parseFloat(notRounded);
-    return this.yearsOnVenus;
+    return this.yearsOnVenus = parseFloat(this.toFixedNotRounded((this.daysOnEarth / 225), 1));
   }
 }
