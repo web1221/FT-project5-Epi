@@ -25,6 +25,9 @@ export class SpaceAge {
     return this.yearsOnMars = parseFloat(this.toFixedNotRounded((this.daysOnEarth / 687), 1));
   }
   calculateYearsOnJupiter(){
+    this.calculateDaysOnEarth();
+    let calculations = this.toFixedNotRounded((this.daysOnEarth / (11.8 * 365)), 1);
+    return this.yearsOnJupiter = parseFloat(calculations)
 
   }
 }
