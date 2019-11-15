@@ -30,6 +30,13 @@
 * __Input: 20 years old, 3 months, and 4 days.__
 * __Output: 1.7 Jupiter years__
 
+###### The program will be able to calculate how many years left before the user reaches life expectancy.
+* __Input: 20 years old, 3 months, and 4 days. On Venus__
+* __Output: 58.7__
+
+###### If the user has already surpassed their life expectancy, return the years they surpassed.
+* __Input: 20 years old, 3 months, and 4 days. on Mercury__
+* __Output: 5.3__
 
 
 

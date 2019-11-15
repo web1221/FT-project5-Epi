@@ -3,7 +3,7 @@ export class SpaceAge {
     this.years = years;
     this.months = months;
     this.days = days;
-    this.lifeExpectancy = 78.7;
+    // this.lifeExpectancy = 78.7;
   }
 
   toFixedNotRounded(num, fixed){
@@ -32,4 +32,7 @@ export class SpaceAge {
     return this.yearsOnJupiter = parseFloat(calculations);
 
   }
-}
+  lifeExpectancy(planetAge){
+    this.lifeExpectancy = calculateDaysOnEarth(78, 3, 4)
+
+  }

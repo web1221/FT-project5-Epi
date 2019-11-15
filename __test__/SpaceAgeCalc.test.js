@@ -22,4 +22,7 @@ describe ('spaceAge', () => {
   test('should calculate how old user is on Jupiter', () => {
     expect(spaceAge.calculateYearsOnJupiter()).toEqual(1.7);
   });
+  test('should return how many years the person has before they reach their life expectancy', () => {
+    expect(spaceAge.lifeExpectancy()).toEqual());
+  });
 });
