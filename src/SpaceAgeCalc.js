@@ -1,9 +1,9 @@
 export class SpaceAge {
-  constructor(years, months, days){
+  constructor(years, months, days, lifeExpectancy){
     this.years = years;
     this.months = months;
     this.days = days;
-    this.lifeExpectancyInDays = 28744;
+    this.lifeExpectancy = lifeExpectancy;
   }
 
   toFixedNotRounded(num, fixed){
@@ -13,9 +13,13 @@ export class SpaceAge {
   calculateDaysOnEarth(){
     return this.daysOnEarth = (this.years * 365) + (this.months * 30) + (this.days);
   }
+  calculateLifeExpectancyInDays(){
+    
+  }
 
   // Mercury Calculations:
   calculateLifeExpOnMercury(){
+
     return this.lifeOnMercury = parseFloat(this.toFixedNotRounded(this.lifeExpectancyInDays / 88), 1);
   }
   calculateYearsOnMercury(){
@@ -35,7 +39,7 @@ export class SpaceAge {
 
   //Mars Calculations:
   calculateLifeExpOnMars(){
-  
+    return this.lifeOnMars = parseFloat(this.toFixedNotRounded((this.lifeExpectancyInDays /687), 1));
   }
   calculateYearsOnMars(){
     this.calculateDaysOnEarth();

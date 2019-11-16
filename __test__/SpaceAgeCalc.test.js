@@ -4,7 +4,7 @@ import { SpaceAge } from "./../src/SpaceAgeCalc.js"
 describe ('spaceAge', () => {
   let spaceAge;
   beforeEach(() => {
-    spaceAge = new SpaceAge(20, 3, 4);
+    spaceAge = new SpaceAge(20, 3, 4, 78);
 
   });
   test('should calculate the numbers of days you have lived on earth', () => {
@@ -22,13 +22,13 @@ describe ('spaceAge', () => {
   test('should calculate how old user is on Jupiter', () => {
     expect(spaceAge.calculateYearsOnJupiter()).toEqual(1.7);
   });
-  test('should return how many years the person has before they reach their life expectancy on Mercury', () => {
+  test('should return the average life expectancy in Mercury years', () => {
     expect(spaceAge.calculateLifeExpOnMercury()).toEqual(326);
   });
-  test('should return how many years the person has before they reach their life expectancy on Venus', () => {
+  test('should return the average life expectancy in Venus years', () => {
     expect(spaceAge.calculateLifeExpOnVenus()).toEqual(127.7);
   });
-  test('should return how many years the person has before they reach their life expectancy on Mars', () => {
+  test('should return the average life expectancy in Mars years', () => {
     expect(spaceAge.calculateLifeExpOnMars()).toEqual(41.8);
   });
 });
