@@ -22,7 +22,7 @@ export class SpaceAge {
     return this.ageOnMercury = parseFloat(this.toFixedNotRounded((this.daysOnEarth / 88), 1));
   }
   yearsToLiveMercury(){
-    this.calculateageOnMercury(); 
+    this.calculateageOnMercury();
     this.calculateLifeExpOnMercury();
     if(this.ageOnMercury < this.lifeOnMercury){
       return this.yearstoLiveOnMercury = parseFloat(this.toFixedNotRounded((this.lifeOnMercury - this.ageOnMercury),1))
@@ -41,7 +41,13 @@ export class SpaceAge {
     return this.ageOnVenus = parseFloat(this.toFixedNotRounded((this.daysOnEarth / 225), 1));
   }
   yearsToLiveVenus(){
-
+    this.calculateageOnVenus();
+    this.calculateLifeExpOnVenus();
+    if(this.ageOnVenus < this.lifeOnVenus){
+      return this.yearstoLiveOnVenus = parseFloat(this.toFixedNotRounded((this.lifeOnVenus - this.ageOnVenus),1))
+    } else if(this.ageOnVenus > this.lifeOnVenus){
+      return this.passedLifeExpVenus = parseFloat(this.toFixedNotRounded((this.ageOnVenus - this.lifeOnVenus), 1));
+    }
   }
 
   //Mars Calculations: ----------
