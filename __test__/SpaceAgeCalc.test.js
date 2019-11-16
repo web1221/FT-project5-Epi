@@ -54,9 +54,9 @@ describe ('spaceAge', () => {
     expect(newSpaceAge.yearsToLiveMars()).toEqual(0.7);
   });
   test('should return how many years a person has before they reach their life expectancy on Jupiter.', () => {
-    expect(spaceAge.yearsToliveJupiter()).toEqual(30.7);
+    expect(spaceAge.yearsToLiveJupiter()).toEqual(4.8);
   });
   test('If they surpass their life expectancy on Jupiter it should return how many years they surpassed it.', () => {
-    expect(newSpaceAge.yearsToliveJupiter()).toEqual(0.7);
+    expect(newSpaceAge.yearsToLiveJupiter()).toEqual(0.10);
   });
 });

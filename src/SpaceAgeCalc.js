@@ -78,7 +78,13 @@ export class SpaceAge {
     let calculations = this.toFixedNotRounded((this.daysOnEarth / (11.8 * 365)), 1);
     return this.ageOnJupiter = parseFloat(calculations);
   }
-  yearsToliveJupiter(){
-    
+  yearsToLiveJupiter(){
+    this.calculateLifeExpJupiter()
+    this.calculateageOnJupiter()
+    if(this.ageOnJupiter < this.lifeOnJupiter){
+      return this.yearstoLiveOnJupiter = parseFloat(this.toFixedNotRounded((this.lifeOnJupiter - this.ageOnJupiter),1))
+    } else if(this.ageOnJupiter > this.lifeOnJupiter){
+      return this.passedLifeExpJupiter = parseFloat(this.toFixedNotRounded((this.ageOnJupiter - this.lifeOnJupiter), 1));
+    }
   }
 }
