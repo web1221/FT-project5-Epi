@@ -9,28 +9,28 @@ describe ('spaceAge', () => {
     newSpaceAge = new SpaceAge(79, 3, 5, 78);
   });
   test('should calculate the numbers of days you have lived on earth', () => {
-    expect(spaceAge.calculateDaysOnEarth()).toEqual(7394);
+    expect(spaceAge.daysOnEarth).toEqual(7394);
   });
   test('should calculate how old user is on Mercury', () => {
-    expect(spaceAge.calculateageOnMercury()).toEqual(84.0);
+    expect(spaceAge.planetAgeCalculations.mercury).toEqual(84.0);
   });
   test('should calculate how old user is on Venus', () => {
-    expect(spaceAge.calculateageOnVenus()).toEqual(32.8);
+    expect(spaceAge.planetAgeCalculations.venus).toEqual(32.8);
   });
   test('should calculate how old user is on Mars', () => {
-    expect(spaceAge.calculateageOnMars()).toEqual(10.7);
+    expect(spaceAge.planetAgeCalculations.mars).toEqual(10.7);
   });
   test('should calculate how old user is on Jupiter', () => {
     expect(spaceAge.calculateageOnJupiter()).toEqual(1.7);
   });
   test('should return the average life expectancy in Mercury years', () => {
-    expect(spaceAge.calculateLifeExpOnMercury()).toEqual(323);
+    expect(spaceAge.planetLifeExpCalculations.mercury).toEqual(323);
   });
   test('should return the average life expectancy in Venus years', () => {
-    expect(spaceAge.calculateLifeExpOnVenus()).toEqual(126.5);
+    expect(spaceAge.planetLifeExpCalculations.venus).toEqual(126.5);
   });
   test('should return the average life expectancy in Mars years', () => {
-    expect(spaceAge.calculateLifeExpOnMars()).toEqual(41.4);
+    expect(spaceAge.planetLifeExpCalculations.mars).toEqual(41.4);
   });
   test('should return the average life expectancy in Jupiter years', () => {
     expect(spaceAge.calculateLifeExpJupiter()).toEqual(6.6);
