@@ -78,4 +78,7 @@ export class SpaceAge {
     let calculations = this.toFixedNotRounded((this.daysOnEarth / (11.8 * 365)), 1);
     return this.ageOnJupiter = parseFloat(calculations);
   }
+  yearsToliveJupiter(){
+    
+  }
 }
