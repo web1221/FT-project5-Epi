@@ -59,7 +59,13 @@ export class SpaceAge {
     return this.ageOnMars = parseFloat(this.toFixedNotRounded((this.daysOnEarth / 687), 1));
   }
   yearsToLiveMars(){
-
+    this.calculateageOnMars();
+    this.calculateLifeExpOnMars();
+    if(this.ageOnMars < this.lifeOnMars){
+      return this.yearstoLiveOnMars = parseFloat(this.toFixedNotRounded((this.lifeOnMars - this.ageOnMars),1))
+    } else if(this.ageOnMars > this.lifeOnMars){
+      return this.passedLifeExpMars = parseFloat(this.toFixedNotRounded((this.ageOnMars - this.lifeOnMars), 1));
+    }
   }
 
   //Jupiter Calculations --------
