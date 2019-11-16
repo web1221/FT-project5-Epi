@@ -21,7 +21,7 @@ describe ('spaceAge', () => {
     expect(spaceAge.planetAgeCalculations.mars).toEqual(10.7);
   });
   test('should calculate how old user is on Jupiter', () => {
-    expect(spaceAge.calculateageOnJupiter()).toEqual(1.7);
+    expect(spaceAge.planetAgeCalculations.jupiter).toEqual(1.7);
   });
   test('should return the average life expectancy in Mercury years', () => {
     expect(spaceAge.planetLifeExpCalculations.mercury).toEqual(323);
@@ -33,7 +33,7 @@ describe ('spaceAge', () => {
     expect(spaceAge.planetLifeExpCalculations.mars).toEqual(41.4);
   });
   test('should return the average life expectancy in Jupiter years', () => {
-    expect(spaceAge.calculateLifeExpJupiter()).toEqual(6.6);
+    expect(spaceAge.planetLifeExpCalculations.jupiter).toEqual(6.6);
   });
   test('should return how many years a person has before they reach their life expectancy on Mercury.', () => {
     expect(spaceAge.yearsToLiveMercury()).toEqual(239);
