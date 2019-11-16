@@ -3,7 +3,7 @@ export class SpaceAge {
     this.years = years;
     this.months = months;
     this.days = days;
-    this.lifeExpectancy = lifeExpectancy;
+    this.lifeExpectancy = lifeExpectancy * 365;
   }
 
   toFixedNotRounded(num, fixed){
@@ -13,24 +13,20 @@ export class SpaceAge {
   calculateDaysOnEarth(){
     return this.daysOnEarth = (this.years * 365) + (this.months * 30) + (this.days);
   }
-  calculateLifeExpectancyInDays(){
-    
-  }
 
   // Mercury Calculations:
   calculateLifeExpOnMercury(){
-
-    return this.lifeOnMercury = parseFloat(this.toFixedNotRounded(this.lifeExpectancyInDays / 88), 1);
+    return this.lifeOnMercury = parseFloat(this.toFixedNotRounded(this.lifeExpectancy / 88), 1);
   }
   calculateYearsOnMercury(){
     this.calculateDaysOnEarth();
     return this.yearsOnMercury = parseFloat(this.toFixedNotRounded((this.daysOnEarth / 88), 1));
   }
 
+
   // Venus Calculations:
   calculateLifeExpOnVenus(){
-    return this.lifeOnVenus = parseFloat(this.toFixedNotRounded((this.lifeExpectancyInDays / 225), 1));
-
+    return this.lifeOnVenus = parseFloat(this.toFixedNotRounded((this.lifeExpectancy / 225), 1));
   }
   calculateYearsOnVenus(){
     this.calculateDaysOnEarth();
@@ -39,7 +35,7 @@ export class SpaceAge {
 
   //Mars Calculations:
   calculateLifeExpOnMars(){
-    return this.lifeOnMars = parseFloat(this.toFixedNotRounded((this.lifeExpectancyInDays /687), 1));
+    return this.lifeOnMars = parseFloat(this.toFixedNotRounded((this.lifeExpectancy /687), 1));
   }
   calculateYearsOnMars(){
     this.calculateDaysOnEarth();
@@ -47,15 +43,14 @@ export class SpaceAge {
   }
 
   //Jupiter Calculations
+  calculateLifeExpJupiter(){
+    const calculations = this.toFixedNotRounded((this.lifeExpectancy / (11.8 * 365)), 1);
+    return this.lifeOnJupiter = parseFloat(calculations)
+  }
   calculateYearsOnJupiter(){
     this.calculateDaysOnEarth();
     let calculations = this.toFixedNotRounded((this.daysOnEarth / (11.8 * 365)), 1);
     return this.yearsOnJupiter = parseFloat(calculations);
 
   }
-  lifeExpectancyOnMars(){
-
-  }
-
-
 }

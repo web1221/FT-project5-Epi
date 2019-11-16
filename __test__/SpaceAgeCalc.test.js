@@ -23,12 +23,15 @@ describe ('spaceAge', () => {
     expect(spaceAge.calculateYearsOnJupiter()).toEqual(1.7);
   });
   test('should return the average life expectancy in Mercury years', () => {
-    expect(spaceAge.calculateLifeExpOnMercury()).toEqual(326);
+    expect(spaceAge.calculateLifeExpOnMercury()).toEqual(323);
   });
   test('should return the average life expectancy in Venus years', () => {
-    expect(spaceAge.calculateLifeExpOnVenus()).toEqual(127.7);
+    expect(spaceAge.calculateLifeExpOnVenus()).toEqual(126.5);
   });
   test('should return the average life expectancy in Mars years', () => {
-    expect(spaceAge.calculateLifeExpOnMars()).toEqual(41.8);
+    expect(spaceAge.calculateLifeExpOnMars()).toEqual(41.4);
+  });
+  test('should return the average life expectancy in Jupiter years', () => {
+    expect(spaceAge.calculateLifeExpJupiter()).toEqual(6.6);
   });
 });
