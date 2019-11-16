@@ -47,4 +47,10 @@ describe ('spaceAge', () => {
   test('If they surpass their life expectancy on Venus it should return how many years they surpassed it.', () => {
     expect(newSpaceAge.yearsToLiveVenus()).toEqual(2);
   });
+  test('should return how many years a person has before they reach their life expectancy on Mars.', () => {
+    expect(spaceAge.yearsToLiveMars()).toEqual(30.7);
+  });
+  test('If they surpass their life expectancy on Mars it should return how many years they surpassed it.', () => {
+    expect(newSpaceAge.yearsToLiveMars()).toEqual(0.70);
+  });
 });
