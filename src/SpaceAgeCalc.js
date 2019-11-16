@@ -25,7 +25,7 @@ export class SpaceAge {
     this.calculateageOnMercury();
     this.calculateLifeExpOnMercury();
     if(this.ageOnMercury < this.lifeOnMercury){
-      return this.yearstoLiveOnMercury = parseFloat(this.toFixedNotRounded((this.lifeOnMercury - this.ageOnMercury),1))
+      return this.yearstoLiveOnMercury = parseFloat(this.toFixedNotRounded((this.lifeOnMercury - this.ageOnMercury),1));
     } else if(this.ageOnMercury > this.lifeOnMercury){
       return this.passedLifeExpMercury = parseFloat(this.toFixedNotRounded((this.ageOnMercury - this.lifeOnMercury), 1));
     }
@@ -44,7 +44,7 @@ export class SpaceAge {
     this.calculateageOnVenus();
     this.calculateLifeExpOnVenus();
     if(this.ageOnVenus < this.lifeOnVenus){
-      return this.yearstoLiveOnVenus = parseFloat(this.toFixedNotRounded((this.lifeOnVenus - this.ageOnVenus),1))
+      return this.yearstoLiveOnVenus = parseFloat(this.toFixedNotRounded((this.lifeOnVenus - this.ageOnVenus),1));
     } else if(this.ageOnVenus > this.lifeOnVenus){
       return this.passedLifeExpVenus = parseFloat(this.toFixedNotRounded((this.ageOnVenus - this.lifeOnVenus), 1));
     }
@@ -62,7 +62,7 @@ export class SpaceAge {
     this.calculateageOnMars();
     this.calculateLifeExpOnMars();
     if(this.ageOnMars < this.lifeOnMars){
-      return this.yearstoLiveOnMars = parseFloat(this.toFixedNotRounded((this.lifeOnMars - this.ageOnMars),1))
+      return this.yearstoLiveOnMars = parseFloat(this.toFixedNotRounded((this.lifeOnMars - this.ageOnMars),1));
     } else if(this.ageOnMars > this.lifeOnMars){
       return this.passedLifeExpMars = parseFloat(this.toFixedNotRounded((this.ageOnMars - this.lifeOnMars), 1));
     }
@@ -79,10 +79,10 @@ export class SpaceAge {
     return this.ageOnJupiter = parseFloat(calculations);
   }
   yearsToLiveJupiter(){
-    this.calculateLifeExpJupiter()
-    this.calculateageOnJupiter()
+    this.calculateLifeExpJupiter();
+    this.calculateageOnJupiter();
     if(this.ageOnJupiter < this.lifeOnJupiter){
-      return this.yearstoLiveOnJupiter = parseFloat(this.toFixedNotRounded((this.lifeOnJupiter - this.ageOnJupiter),1))
+      return this.yearstoLiveOnJupiter = parseFloat(this.toFixedNotRounded((this.lifeOnJupiter - this.ageOnJupiter),1));
     } else if(this.ageOnJupiter > this.lifeOnJupiter){
       return this.passedLifeExpJupiter = parseFloat(this.toFixedNotRounded((this.ageOnJupiter - this.lifeOnJupiter), 1));
     }

@@ -3,8 +3,3 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import { SpaceAge } from './SpaceAgeCalc.js';
-let spaceAge = new SpaceAge(20,3,4,78);
-let newSpaceAge = new SpaceAge(79, 3, 5, 78);
-// console.log("Age:", newSpaceAge.calculateageOnJupiter());
-// console.log("Exp:", newSpaceAge.calculateLifeExpJupiter());
-// console.log("Till reached:",newSpaceAge.calculateageOnJupiter() -  spaceAge.calculateLifeExpJupiter());
