@@ -1,6 +1,6 @@
 # _Calculate your Age in Space!_
 
-#### _**** Calculate your Age in Space! is an independent project for Epicodus, 11/15/19_
+#### _**Calculate your Age in Space! is an independent project for Epicodus, 11/15/19**
 
 #### By _**Angela Weber**_
 
@@ -41,7 +41,7 @@
 
 
 ## Description
-  _This application was created to take a users input and calculate how old that person would be on Mercury, Venus, Mars, and/or Jupiter. This program will also tell the user how many years until they reach their life expectancy on each planet. If they have already surpassed their life expectancy, then the program will return the amount of years they have surpassed on each planet.  This project was also created to practice TDD specs. _
+  _This application was created to take a users input and calculate how old that person would be on Mercury, Venus, Mars, and/or Jupiter. This program will also tell the user how many years until they reach their life expectancy on each planet. If they have already surpassed their life expectancy, then the program will return the amount of years they have surpassed on each planet.  This project was also created to practice TDD specs._
 
 ## Setup/Installation Requirements
 
