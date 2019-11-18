@@ -1,6 +1,6 @@
 # _Calculate your Age in Space!_
 
-#### _**Calculate your Age in Space! is an independent project for Epicodus, 11/15/19**
+#### **Calculate your Age in Space! is an independent project for Epicodus, 11/15/19**
 
 #### By _**Angela Weber**_
 
