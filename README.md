@@ -1,6 +1,6 @@
-# __
+# _Calculate your Age in Space!_
 
-#### _**** is an independent project for Epicodus, 11/15/19_
+#### _**** Calculate your Age in Space! is an independent project for Epicodus, 11/15/19_
 
 #### By _**Angela Weber**_
 
@@ -10,8 +10,8 @@
 * __Input: 20 years old, 3 months, and 4 days.__
 * __Output: 7394 days on earth__
 
-###### The program returns the users life expectancy based someone who lives in the United States.
-* __Input: Lives in USA__
+###### The program will let the user enter their life expectancy for their demographic.
+* __Input: Someone who lives in the United States__
 * __Output: 78.7 years old__
 
 ###### The program will calculate age on Mercury.
@@ -30,30 +30,31 @@
 * __Input: 20 years old, 3 months, and 4 days.__
 * __Output: 1.7 Jupiter years__
 
-###### The program will be able to calculate how many years left before the user reaches life expectancy.
+###### The program will be able to calculate how many years are left before the user reaches life expectancy on the selected planet.
 * __Input: 20 years old, 3 months, and 4 days. On Venus__
 * __Output: 58.7__
 
-###### If the user has already surpassed their life expectancy, return the years they surpassed.
+###### If the user has already surpassed their life expectancy, return the years they surpassed on the selected planet.
 * __Input: 20 years old, 3 months, and 4 days. on Mercury__
 * __Output: 5.3__
 
 
 
 ## Description
-  __
+  _This application was created to take a users input and calculate how old that person would be on Mercury, Venus, Mars, and/or Jupiter. This program will also tell the user how many years until they reach their life expectancy on each planet. If they have already surpassed their life expectancy, then the program will return the amount of years they have surpassed on each planet.  This project was also created to practice TDD specs. _
 
 ## Setup/Installation Requirements
 
-*
-*
-*
-*
-*
+* Open application
+* Enter your how old you are in years, months, days
+* Enter a life expectancy for your demographic
+* Click the submit button to see results for all planets
+* Resubmit the form to see different results
+
 
 ## Known Bugs
 
-__
+_There are no know bugs. If you come across one please contact me._
 
 ## Support and contact details
 
