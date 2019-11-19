@@ -24,7 +24,7 @@ describe ('spaceAge', () => {
     expect(spaceAge.planetAgeCalculations.jupiter).toEqual(1.7);
   });
   test('should return the average life expectancy in Mercury years', () => {
-    expect(spaceAge.planetLifeExpCalculations.mercury).toEqual(323);
+    expect(spaceAge.planetLifeExpCalculations.mercury).toEqual(323.5);
   });
   test('should return the average life expectancy in Venus years', () => {
     expect(spaceAge.planetLifeExpCalculations.venus).toEqual(126.5);
@@ -36,10 +36,10 @@ describe ('spaceAge', () => {
     expect(spaceAge.planetLifeExpCalculations.jupiter).toEqual(6.6);
   });
   test('should return how many years a person has before they reach their life expectancy on Mercury.', () => {
-    expect(spaceAge.yearsToLiveMercury()).toEqual(239);
+    expect(spaceAge.yearsToLiveMercury()).toEqual(239.5);
   });
   test('If they surpass their life expectancy on Mercury it should return how many years they surpassed it.', () => {
-    expect(newSpaceAge.yearsToLiveMercury()).toEqual(5.6);
+    expect(newSpaceAge.yearsToLiveMercury()).toEqual(5.1);
   });
   test('should return how many years a person has before they reach their life expectancy on Venus.', () => {
     expect(spaceAge.yearsToLiveVenus()).toEqual(93.7);
