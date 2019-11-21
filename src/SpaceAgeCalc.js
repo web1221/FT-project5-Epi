@@ -4,74 +4,82 @@ export class SpaceAge {
     this.months = months;
     this.days = days;
     this.lifeExpectancy = lifeExpectancy * 365;
-    this.daysOnEarth = (this.years * 365) + (this.months * 30) + (this.days);
-    this.planetAgeCalculations = {
-      mercury: parseFloat(this.toFixedNotRounded((this.daysOnEarth / 88), 1)),
-      venus: parseFloat(this.toFixedNotRounded((this.daysOnEarth / 225), 1)),
-      mars: parseFloat(this.toFixedNotRounded((this.daysOnEarth / 687), 1)),
-      jupiter: parseFloat(this.toFixedNotRounded((this.daysOnEarth / (11.8 * 365)), 1))
-    };
-    this.planetLifeExpCalculations = {
-      mercury: parseFloat(this.toFixedNotRounded((this.lifeExpectancy / 88), 1)),
-      venus: parseFloat(this.toFixedNotRounded((this.lifeExpectancy / 225), 1)),
-      mars: parseFloat(this.toFixedNotRounded((this.lifeExpectancy /687), 1)),
-      jupiter: parseFloat(this.toFixedNotRounded((this.lifeExpectancy / (11.8 * 365)), 1))
-    };
   }
   toFixedNotRounded(num, fixed){
     let re = new RegExp('^-?\\d+(?:.\\d{0,' + (fixed || -1) + '})?');
     return num.toString().match(re)[0];
   }
-  // Mercury Calculations --------
+  calculateDaysOnEarth(){
+    return this.daysOnEarth = (this.years * 365) + (this.months * 30) + (this.days);
+  }
+  // Mercury Calculations: ---------
+  calculateLifeExpOnMercury(){
+    return this.lifeOnMercury = parseFloat(this.toFixedNotRounded(this.lifeExpectancy / 88), 1);
+  }
+  calculateageOnMercury(){
+    this.calculateDaysOnEarth();
+    return this.ageOnMercury = parseFloat(this.toFixedNotRounded((this.daysOnEarth / 88), 1));
+  }
   yearsToLiveMercury(){
-    let ageOnMercury = this.planetAgeCalculations.mercury;
-    let lifeExpOnMercury = this.planetLifeExpCalculations.mercury;
-    if(ageOnMercury < lifeExpOnMercury){
-      return this.yearstoLiveOnMercury = parseFloat(this.toFixedNotRounded((lifeExpOnMercury - ageOnMercury),1));
-    } else if(ageOnMercury > lifeExpOnMercury){
-      return this.passedLifeExpMercury = parseFloat(this.toFixedNotRounded((ageOnMercury - lifeExpOnMercury), 1));
-    } else{
-      return "Happy life expectancy day!";
+    this.calculateageOnMercury();
+    this.calculateLifeExpOnMercury();
+    if(this.ageOnMercury < this.lifeOnMercury){
+      return this.yearstoLiveOnMercury = parseFloat(this.toFixedNotRounded((this.lifeOnMercury - this.ageOnMercury),1));
+    } else if(this.ageOnMercury > this.lifeOnMercury){
+      return this.passedLifeExpMercury = parseFloat(this.toFixedNotRounded((this.ageOnMercury - this.lifeOnMercury), 1));
     }
   }
-
   // Venus Calculations: ---------
+  calculateLifeExpOnVenus(){
+    return this.lifeOnVenus = parseFloat(this.toFixedNotRounded((this.lifeExpectancy / 225), 1));
+  }
+  calculateageOnVenus(){
+    this.calculateDaysOnEarth();
+    return this.ageOnVenus = parseFloat(this.toFixedNotRounded((this.daysOnEarth / 225), 1));
+  }
   yearsToLiveVenus(){
-    let ageOnVenus = this.planetAgeCalculations.venus;
-    let lifeExpOnVenus = this.planetLifeExpCalculations.venus;
-    if(ageOnVenus < lifeExpOnVenus){
-      return this.yearstoLiveOnVenus = parseFloat(this.toFixedNotRounded((lifeExpOnVenus - ageOnVenus),1));
-    } else if(ageOnVenus > lifeExpOnVenus){
-      return this.passedLifeExpVenus = parseFloat(this.toFixedNotRounded((ageOnVenus - lifeExpOnVenus), 1));
-    } else{
-      return "Happy life expectancy day!";
+    this.calculateageOnVenus();
+    this.calculateLifeExpOnVenus();
+    if(this.ageOnVenus < this.lifeOnVenus){
+      return this.yearstoLiveOnVenus = parseFloat(this.toFixedNotRounded((this.lifeOnVenus - this.ageOnVenus),1));
+    } else if(this.ageOnVenus > this.lifeOnVenus){
+      return this.passedLifeExpVenus = parseFloat(this.toFixedNotRounded((this.ageOnVenus - this.lifeOnVenus), 1));
     }
   }
-
-
   //Mars Calculations: ----------
+  calculateLifeExpOnMars(){
+    return this.lifeOnMars = parseFloat(this.toFixedNotRounded((this.lifeExpectancy /687), 1));
+  }
+  calculateageOnMars(){
+    this.calculateDaysOnEarth();
+    return this.ageOnMars = parseFloat(this.toFixedNotRounded((this.daysOnEarth / 687), 1));
+  }
   yearsToLiveMars(){
-    let ageOnMars = this.planetAgeCalculations.mars;
-    let lifeExpMars = this.planetLifeExpCalculations.mars;
-    if(ageOnMars < lifeExpMars){
-      return this.yearstoLiveOnMars = parseFloat(this.toFixedNotRounded((lifeExpMars - ageOnMars),1));
-    } else if(ageOnMars > lifeExpMars){
-      return this.passedLifeExpMars = parseFloat(this.toFixedNotRounded((ageOnMars - lifeExpMars), 1));
-    } else{
-      return "Happy life expectancy day!";
+    this.calculateageOnMars();
+    this.calculateLifeExpOnMars();
+    if(this.ageOnMars < this.lifeOnMars){
+      return this.yearstoLiveOnMars = parseFloat(this.toFixedNotRounded((this.lifeOnMars - this.ageOnMars),1));
+    } else if(this.ageOnMars > this.lifeOnMars){
+      return this.passedLifeExpMars = parseFloat(this.toFixedNotRounded((this.ageOnMars - this.lifeOnMars), 1));
     }
   }
-
   //Jupiter Calculations --------
+  calculateLifeExpJupiter(){
+    const calculations = this.toFixedNotRounded((this.lifeExpectancy / (11.8 * 365)), 1);
+    return this.lifeOnJupiter = parseFloat(calculations);
+  }
+  calculateageOnJupiter(){
+    this.calculateDaysOnEarth();
+    let calculations = this.toFixedNotRounded((this.daysOnEarth / (11.8 * 365)), 1);
+    return this.ageOnJupiter = parseFloat(calculations);
+  }
   yearsToLiveJupiter(){
-    let ageOnJupiter = this.planetAgeCalculations.jupiter;
-    let lifeExpOnJupiter = this.planetLifeExpCalculations.jupiter;
-    if(ageOnJupiter < lifeExpOnJupiter){
-      return this.yearstoLiveOnJupiter = parseFloat(this.toFixedNotRounded((lifeExpOnJupiter - ageOnJupiter),1));
-    } else if(ageOnJupiter > lifeExpOnJupiter){
-      return this.passedLifeExpJupiter = parseFloat(this.toFixedNotRounded((ageOnJupiter - lifeExpOnJupiter), 1));
-    }else{
-      return "Happy life expectancy day!";
+    this.calculateLifeExpJupiter();
+    this.calculateageOnJupiter();
+    if(this.ageOnJupiter < this.lifeOnJupiter){
+      return this.yearstoLiveOnJupiter = parseFloat(this.toFixedNotRounded((this.lifeOnJupiter - this.ageOnJupiter),1));
+    } else if(this.ageOnJupiter > this.lifeOnJupiter){
+      return this.passedLifeExpJupiter = parseFloat(this.toFixedNotRounded((this.ageOnJupiter - this.lifeOnJupiter), 1));
     }
   }
 }
